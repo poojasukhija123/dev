@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Eleganza Furniture</title>
+    <link rel="stylesheet" href="login-styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="screen-1">
+            <img src="E:\Pooja\Collage Projects\Website\Eleganza Furniture\Images\Icon PNG.png" alt="Eleganza Furniture Logo" class="logo">
+            <form id="login-form" class="email" onsubmit="return checkLogin()">
+                <ion-icon name="person"></ion-icon>
+                <input type="text" id="username" name="username" placeholder="Username" required>
+                <ion-icon name="lock-closed"></ion-icon>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <button type="submit" class="login">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function checkLogin() {
+            // Get the entered username and password
+            var enteredUsername = document.getElementById("username").value;
+            var enteredPassword = document.getElementById("password").value;
+
+            // Check if the username and password are correct
+            if (enteredUsername === "poojasukhija" && enteredPassword === "Babafarid2023") {
+                // If correct, redirect to the index (home) page
+                window.location.href = "index.html"; // Replace with the actual path to your index page
+                return false; // Prevent the form from submitting
+            } else {
+                // Display an error message if the login is incorrect
+                alert("Invalid username or password. Please try again.");
+                return false; // Prevent the form from submitting
+            }
+        }
+    </script>
+</body>
+</html>
